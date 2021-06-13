@@ -8,6 +8,13 @@ public class StackRunner {
         numberList.push(30);
         numberList.push(56);
         numberList.show();
+        System.out.println();
+        
+        while(numberList.peek() != null) {
+        	System.out.println("Top most element of the stack is: "+numberList.peek());
+        	numberList.pop();
+        	numberList.show();
+        }
 	}
 
 }
