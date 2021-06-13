@@ -169,5 +169,12 @@ public class LinkedList<T> {
         }
     }
 	
-
+	 /**
+	  * It is use to find the first element in the stack
+	 * @return
+	 */
+	public T peek() {
+	        Node<T> node = head;
+	        return(node == null) ? null : node.data;
+	    }
 }

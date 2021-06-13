@@ -1,5 +1,5 @@
 /************************************************************
- * Purpose Implementation Of Stack and Oueue 
+ * Purpose Implementation Of Stack 
  * @author Rosy Rupali
  * @Version 1.0
  * @since 13-06-2021
@@ -7,74 +7,23 @@
  ************************************************************/
 package com.bridgelabz.stackandqueue;
 
-public class Stack {
+public class Stack<T> {
 
-	int stack[] = new int[5];
-	int top = 0;
+	 LinkedList<T> numberList = new LinkedList<T>();
 
-	/**
-	 * Pushed the elements
-	 * 
-	 * @param data
-	 */
-	public void push(int data) {
-		if(isFull()) {
-			System.out.println("Stack is overflow");
-		}else {
-			stack[top] = data;
-			top++;
-		}
-	}
+	    /**
+	     * It is used to add elements to the stack
+	     *
+	     * @param data 
+	     */
+	    public void push(T data) {
+	        numberList.addAtStart(data);
+	    }
 
-	private boolean isFull() {
-		return top == stack.length;
-	}
-
-	/**
-	 * Printing the elements of stack
-	 */
-	public void show() {
-		for(int number : stack) {
-			System.out.println(number+" ");
-		}
-	}
-	
-	/**
-	 * peek of element is been performed
-	 * @return
-	 */
-	public int peek() {
-		int data;
-		data = stack[top -1];
-		return data;
-	}
-	
-	/**
-	 * pop of element is been performed
-	 * @return
-	 */
-	public int pop() {
-		int data = 0;
-		if(isEmpty()) {
-			System.out.println("Stack is underflow");
-		}else {
-			top--;
-			data = stack[top];
-			stack[top] = 0;
-			return data;
-		}
-		return data;
-	}
-	
-	/**
-	 * It is use to get the size
-	 * @return
-	 */
-	public int size() {
-		return top;
-	}
-
-	private boolean isEmpty() {
-		return top == 0;
-	}
+	    /**
+	     * It is used to display the elements in the stack
+	     */
+	    public void show() {
+	        numberList.show();
+	    }
 }
