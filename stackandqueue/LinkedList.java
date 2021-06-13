@@ -78,16 +78,6 @@ public class LinkedList<T> {
 	
 
 	/**
-	 * It removes the first element present in the Linked list
-	 */
-	public void pop() {
-		if (null != head) {
-			Node<T> newHead = head.next;
-			head = newHead;
-		}
-	}
-
-	/**
 	 * It removes the last element present in the Linked List
 	 */
 	public void popLast() {
@@ -162,6 +152,22 @@ public class LinkedList<T> {
 		}
 		return count;
 	}
+	/**
+	 * It removes the top most element from queue and stack
+	 * @return
+	 */
+	public int pop() {
+        if (head != null) {
+            int size = 0;
+            int temp = (int) head.data;
+            head = head.next;
+            size--;
+            return temp;
+        } else {
+            System.out.println("Empty list");
+            return -1;
+        }
+    }
 	
 
 }

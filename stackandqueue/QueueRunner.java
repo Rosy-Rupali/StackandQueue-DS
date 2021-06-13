@@ -8,6 +8,11 @@ public class QueueRunner {
 		numberList.enqueue(70);
 		numberList.enqueue(30);
 		numberList.show();
+		System.out.println("Before removing any element");
+		System.out.println();
+		numberList.dequeue();
+		System.out.println("After removing elements from queue");
+		numberList.show();
 
 	}
 
