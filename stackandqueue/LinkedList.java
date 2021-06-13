@@ -1,5 +1,5 @@
 /************************************************************
- * Purpose Implementation Of Linked List
+ * Purpose Implementation Of Stack and Queue using Linked List
  * @author Rosy Rupali
  * @Version 1.0
  * @since 12-06-2021
@@ -75,6 +75,7 @@ public class LinkedList<T> {
 			node.next = newNode;
 		}
 	}
+	
 
 	/**
 	 * It removes the first element present in the Linked list
